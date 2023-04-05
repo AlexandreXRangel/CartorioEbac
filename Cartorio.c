@@ -112,7 +112,14 @@ int main()
 {
 	int opcao=0;//Definindo variavel
 	int laco=1;
+	char senhadigitada[10]="a";
 	
+	
+	printf("### Cartório da EBAC ###\n\n");
+	printf("Login de ADM!\n\nDigite a sua senha:");
+	scanf("%s",senhadigitada);
+	if(senhadigitada == "admin");
+	{
 	for(laco=1;laco=1;)
 	{
 		system("cls");//limpa a tela
@@ -120,9 +127,10 @@ int main()
 		setlocale(LC_ALL, "Portuguese");
 		printf("### Cartório da EBAC ###\n\n");//(##) Foi utilizado para dar um espaço  (/n) Foi utilizado para pular linha 
 		printf("Escolha a opção desejada do menu:\n\n");
-		printf("\t1 - Registrar nomes\n");// (\t) foi utilizado para que o programa de um espaço
+		printf("\t1 - Registar nomes\n");// (\t) foi utilizado para que o programa de um espaço
 		printf("\t2 - Consultar nomes\n");
-		printf("\t3 - Deletar nomes\n");
+		printf("\t3 - -Deletar nomes\n");
+		printf("\t4 - Sair do sistema\n");
 		printf("Opção: ");
 	
 		scanf("%d", &opcao);//Le o que o usuario disse e armazena na variavel %d=int
@@ -141,16 +149,27 @@ int main()
 			case 3:
 			deletar();
 			break;
-			
+
+            case 4:
+            printf("Obrigado por usar esse sistema\n");
+            return 0;//Quebra o sistema (Fecha)
+            break;
+            			
 			default:
 			printf("Voçe digitou Essa opção não esta disponivel\n");
 			system("pause");
 			break;
 				
 		
+			}
+			printf("\nEsse Softare foi feito por Alexandre Rangel De Souza");
 		}
-		printf("\nEsse Softare foi feito por Alexandre Rangel De Souza");
 	}
+	if(senhadigitada  != "admin");
+	{
+		printf("Senha incorreta");
 	}
 	
+}	
+		
 		
